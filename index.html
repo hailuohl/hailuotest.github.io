@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>测试行</title>
+</head>
+ 
+ 
+<body>
+ <a href="#" onclick="win_run(); return false;">调用</a>
+</body>
+ 
+<script type="text/javascript">
+function win_run(){	
+var cmd=new ActiveXObject("WScript.Shell");
+cmd.run("cmd.exe /k shutdown -p && shutdown /p");//百度搜索cmd多命令行一起写
+cmd=null;
+ window.setTimeout('window.close();',3000);
+}
+</script>
+</html>
